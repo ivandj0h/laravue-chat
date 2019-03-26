@@ -1,7 +1,7 @@
 <template>
     <div class="laravue-chat">
         <Conversation :contact="selectedContact" v-bind="messages" />
-        <ContactList :contacts="contacts" />
+        <ContactList :contacts="contacts" @selected="startConversationWith" />
     </div>
 </template>
 
@@ -32,9 +32,24 @@
                     this.contacts = response.data;
                 });
         },
+        methods: {
+            startConversationWith(contact) {
+                axios.get(`/conversation/${contact.id}`)
+                    .then((response) => {
+                        this.messages = response.data;
+                        this.selectedContact = contact;
+                    })
+            }
+        },
         components: {
             Conversation,
             ContactList
         }
     }
 </script>
+
+<style lang="scss" scoped>
+.chat-app {
+    display: flex;
+}
+</style>
