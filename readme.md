@@ -1,13 +1,21 @@
-## About LaraVue-Chat
+## Messenger App using Laravel and Vue.JS
 
-Laravue-chats is a web chat application using Laravel framework as a backend & VueJS as a frontend, this is a very simple chat for now, but maybe i'll add more feature for the future.
-if you interest with this application, you can clone it and continue to develop it, or maybe feel free to contibute, thanks
+[Youtube Tutorial link](https://www.youtube.com/watch?v=5sXmfwnxfjA&list=PLJpBh2VJhy5x2GKfkfIcn0r6P6uLat7xR)
 
-## Installation LaraVue-Chat
+#### [@WeCodeTutorials](https://twitter.com/WeCodeTutorials)
+[![Logo](https://cdn.pbrd.co/images/HdwCut8.png)](https://www.youtube.com/channel/UCj9VatwdukZjNOnIKcpWcsA)
+
+This project is made for my youtube tutorial on "Messenger App with Laravel, Vue.JS & Laravel Echo".
+
+![App Example](https://media.giphy.com/media/8cARsYOk9DmCLZTZOb/giphy.gif)
+
+## get it up and running.
+
+After you clone this project, do the following:
 
 ```bash
 # go into the project
-cd Laravue-chat
+cd Messenger-App-VueJS-and-Laravel
 
 # create a .env file
 cp .env.example .env
@@ -49,10 +57,4 @@ BROADCAST_DRIVER=pusher
 npm run watch
 ```
 
-## ScreenShoot LaraVue-Chat
-
-
-
-## License
-
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Good Luck :)
