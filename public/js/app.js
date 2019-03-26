@@ -1767,7 +1767,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    contacts: {
+      type: Array,
+      default: []
+    }
+  }
+});
 
 /***/ }),
 
@@ -36881,7 +36900,27 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "contacts-list" })
+  return _c("div", { staticClass: "contacts-list" }, [
+    _c(
+      "ul",
+      _vm._l(_vm.contacts, function(contact) {
+        return _c("li", { key: contact.id }, [
+          _c("div", { staticClass: "avatar" }, [
+            _c("img", {
+              attrs: { src: contact.profile_image, alt: contact.name }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "contact" }, [
+            _c("p", { staticClass: "name" }, [_vm._v(_vm._s(contact.name))]),
+            _vm._v(" "),
+            _c("p", { staticClass: "email" }, [_vm._v(_vm._s(contact.email))])
+          ])
+        ])
+      }),
+      0
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
