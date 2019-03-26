@@ -7,7 +7,9 @@
             <div class="card">
                 <div class="card-header">LaraVue Chat</div>
 
-                <div class="card-body" id="app"></div>
+                <div class="card-body" id="app">
+                    <laravue-chat :user="{{ auth()->user() }}"></laravue-chat>
+                </div>
             </div>
         </div>
     </div>
