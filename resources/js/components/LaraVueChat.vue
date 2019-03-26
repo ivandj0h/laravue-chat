@@ -1,23 +1,24 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Example Component</div>
-
-                    <div class="card-body">
-                        I'm an example component.
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="laravue-chat">
+        <Conversation :contact="selectedContact" v-bind="messages" />
+        <ContactList :contacts="contacts" />
     </div>
 </template>
 
 <script>
     export default {
+        data() {
+            return {
+                selectedContact: null,
+                messages: [],
+                contacts: []
+            };
+        },
         mounted() {
-            console.log('Component mounted.')
+            axios.get('/contacts')
+                .then((response) => {
+                    this.contacts = response.data;
+                });
         }
     }
 </script>
