@@ -1,26 +1,53 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
-
-<p align="center"><img src="https://github.com/vuejs/art/blob/master/logo.svg" size="200px"></p>
-
 ## About LaraVue-Chat
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Laravue-chats is a web chat application using Laravel framework as a backend & VueJS as a frontend, this is a very simple chat for now, but maybe i'll add more feature for the future.
+if you interest with this application, you can clone it and continue to develop it, or maybe feel free to contibute, thanks
 
 ## Installation LaraVue-Chat
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```bash
+# go into the project
+cd Laravue-chat
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost you and your team's skills by digging into our comprehensive video library.
+# create a .env file
+cp .env.example .env
+
+# install composer dependencies
+composer update
+
+# install npm dependencies
+npm install
+
+# generate a key for your application
+php artisan key:generate
+
+# create a local MySQL database (make sure you have MySQL up and running)
+mysql -u root
+
+> create database chat_db;
+> exit;
+
+# add the database connection config to your .env file
+DB_CONNECTION=mysql
+DB_DATABASE=chat_db
+DB_USERNAME=root
+DB_PASSWORD=
+
+# run the migration files to generate the schema
+php artisan migrate
+
+# visit https://pusher.com and create a free app. then copy the keys into your .env file
+PUSHER_APP_ID=your_pusher_app_id
+PUSHER_APP_KEY=your_pusher_app_key
+PUSHER_APP_SECRET=your_pusher_app_secret
+PUSHER_APP_CLUSTER=your_pusher_cluster
+
+# change the BROADCAST_DRIVER in your .env to pusher
+BROADCAST_DRIVER=pusher
+
+# run webpack and watch for changes
+npm run watch
+```
 
 ## ScreenShoot LaraVue-Chat
 
