@@ -1,6 +1,6 @@
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
-<p align="center"><img src="https://github.com/vuejs/art/blob/master/logo.svg"></p>
+<p align="center"><img src="https://github.com/vuejs/art/blob/master/logo.svg" size="200px"></p>
 
 ## About LaraVue-Chat
 
